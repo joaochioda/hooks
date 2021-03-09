@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CallBack from "./callBack";
+import CustomHook from "./customHook";
+import UseContext from "./useContext";
+import UseMemo from "./useMemo";
 
+import Header from "./header";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header>
+        <Route path="/callback">
+          <CallBack />
+        </Route>
+        <Route path="/customhook">
+          <CustomHook />
+        </Route>
+        <Route path="/usecontext">
+          <UseContext />
+        </Route>
+        <Route path="/usememo">
+          <UseMemo />
+        </Route>
+      </Header>
+    </Router>
   );
 }
 
