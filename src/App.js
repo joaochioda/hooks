@@ -3,7 +3,8 @@ import CallBack from "./callBack";
 import CustomHook from "./customHook";
 import UseContext from "./useContext";
 import UseMemo from "./useMemo";
-
+import ButtonIncrement from "./useContext/button";
+import CountProvider from "./useContext/context";
 import Header from "./header";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -18,7 +19,10 @@ function App() {
           <CustomHook />
         </Route>
         <Route path="/usecontext">
-          <UseContext />
+          <CountProvider>
+            <UseContext />
+            <ButtonIncrement />
+          </CountProvider>
         </Route>
         <Route path="/usememo">
           <UseMemo />

@@ -3,7 +3,6 @@ import Button from "./button";
 
 function CallBack() {
   const [count, setCount] = useState(1);
-  const [changeColor, setChangeColor] = useState(false);
 
   useEffect(() => {
     console.log("re-render");

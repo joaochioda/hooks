@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 
-function UseContext() {
-  return <div>UseContext</div>;
+import { CountContext } from "./context";
+
+function Counter() {
+  const { user, count } = useContext(CountContext);
+
+  return (
+    <div>
+      <span>{user}</span>
+      <span>{count}</span>
+    </div>
+  );
 }
 
-export default UseContext;
+export default Counter;
